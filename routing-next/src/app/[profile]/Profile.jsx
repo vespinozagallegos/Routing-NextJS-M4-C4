@@ -12,3 +12,5 @@ export const Profile = ({ params }) => {
 }
 
 export default Profile;
+
+// SI QUIERO CREAR UN PERFIL CON EL MISMO NOMBRE DE UNA RUTA YA DEFINIDA, COMO LO HAGO? -----> enrutamiento anidado es la respuesta 
