@@ -6,7 +6,7 @@ export const Profile = ({ params }) => {
     //! se utiliza con minuscula porque sigue el nombre de esta CARPETA
     return (
         <div>
-            <h1>Soy el Profile: {params.profile}</h1>
+            <h1>Soy el Profile: {params.slug}</h1>
         </div>
     );
 }
