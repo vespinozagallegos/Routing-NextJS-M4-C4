@@ -1,4 +1,4 @@
-// PASO 1
+//? PASO 1
 // Aceeder a los params desestructurando params
 // params es un objeto PERO esta vez como estamos capturando MAS de un PARAMS cons [...slug]
 // debemos hacer la diferencia en el retorno
@@ -9,6 +9,18 @@
 // Esto es porque slug pasa a ser un array de strings
 // [slug]   ---> { params }
 // [...slug]---> { slug: ["category", "subcategory"] }
+
+// export const SlugStore = ({ params }) => {
+//     return(
+//         <div>
+//             <h1>Este es SlugStore</h1>
+//         </div>
+//     );
+// }
+
+// export default SlugStore;
+
+//?PASO 2
 
 export const SlugStore = ({ params }) => {
     return(
