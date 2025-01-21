@@ -29,10 +29,14 @@
 const fetchDataStore = async (params) => {
     // desestructuramos SLUG que es un objeto dentro de la PROPIEDAD PARAMS
     const [category, subcategory] = params.slug;
-    // PETICIÓN fetch a una API FICTICIA
+    // PETICIÓN(request) con fetch a una API FICTICIA
     const data = await fetch(
         `https://api.tienda.com/products?category=${category}&subcategory=${subcategory}`
-    )
+    );
+    // PARSEAR la INFo antes de utilizarla, debido a que es una REQUEST con FETCH
+    const items = await data.json();
+    // una vez obtenido, retornamos la info
+    return items;
 }
 
 export const SlugStore = async({ params }) => {   //---> { slug: ["category", "subcategory"] }
