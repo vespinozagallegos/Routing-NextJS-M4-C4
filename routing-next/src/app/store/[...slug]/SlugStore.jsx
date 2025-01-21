@@ -30,7 +30,7 @@ const fetchDataStore = async (params) => {
 
 }
 
-export const SlugStore = ({ params }) => {   //---> { slug: ["category", "subcategory"] }
+export const SlugStore = async({ params }) => {   //---> { slug: ["category", "subcategory"] }
     // constante que espera los datos de la FUNCIÓN
     // que recibe los params directamente sin DESESTRUCTURAR
     const itemsToRenders = await fetchDataStore(params);
