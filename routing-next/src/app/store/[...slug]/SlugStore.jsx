@@ -33,7 +33,9 @@ const fetchDataStore = async (params) => {
     const data = await fetch(
         `https://api.tienda.com/products?category=${category}&subcategory=${subcategory}`
     );
-    // PARSEAR la INFo antes de utilizarla, debido a que es una REQUEST con FETCH
+    //! PARSEAR la INFo antes de utilizarla, debido a que es una REQUEST con FETCH
+    // la info viene en formato raw(crudo)--->(JSON, XML, texto plano, etc.)
+    // El método .json() convierte el contenido de ese cuerpo a un objeto JavaScript manipulable. (PARSEAR)
     const items = await data.json();
     // una vez obtenido, retornamos la info
     return items;
