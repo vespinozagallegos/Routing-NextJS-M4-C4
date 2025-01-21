@@ -29,6 +29,10 @@
 const fetchDataStore = async (params) => {
     // desestructuramos SLUG que es un objeto dentro de la PROPIEDAD PARAMS
     const [category, subcategory] = params.slug;
+    // PETICIÓN fetch a una API FICTICIA
+    const data = await fetch(
+        `https://api.tienda.com/products?category=${category}&subcategory=${subcategory}`
+    )
 }
 
 export const SlugStore = async({ params }) => {   //---> { slug: ["category", "subcategory"] }
