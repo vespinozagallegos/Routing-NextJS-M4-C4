@@ -20,7 +20,7 @@
 
 // export default SlugStore;
 
-//?PASO 2
+//?PASO 2  HACER UN LLAMADO A UNA API CON VALORES QUE ME PASEN POR PARÁMETROS
 // Funcion que tome los valores de los parámetros
 // que en base a esos parámetros haga una consulta a la API
 // para poder consumir los datos y renderizarlos
@@ -46,8 +46,17 @@ export const SlugStore = async({ params }) => {   //---> { slug: ["category", "s
     // que recibe los params directamente sin DESESTRUCTURAR
     const itemsToRenders = await fetchDataStore(params);
     return(
+        // RENDERIZAR LA INFORMACION PARSEADA en la funcion y GUARDADA EN itemsToRenders
+        // se mapea itemsToRenders antes de renderizar la info
+        // el div va son su key id
         <div>
-            <h1>Este es SlugStore</h1>
+            {itemsToRenders.map((item) => (
+                <div key={item.id}>
+                    <h1>{item.name}</h1>
+                    <p>{item.description}</p>
+                    <p>{item.price}</p>
+                </div>
+            ))}
         </div>
     );
 }
