@@ -27,7 +27,8 @@
 
 // params no van desesructurados porque es una FUNCIÓN NO un COMPONENTE
 const fetchDataStore = async (params) => {
-
+    // desestructuramos SLUG que es un objeto dentro de la PROPIEDAD PARAMS
+    const [category, subcategory] = params.slug;
 }
 
 export const SlugStore = async({ params }) => {   //---> { slug: ["category", "subcategory"] }
