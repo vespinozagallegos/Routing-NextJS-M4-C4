@@ -1,3 +1,4 @@
+// PASO 1
 // Aceeder a los params desestructurando params
 // params es un objeto PERO esta vez como estamos capturando MAS de un PARAMS cons [...slug]
 // debemos hacer la diferencia en el retorno
@@ -5,8 +6,10 @@
 // independiente de que agreguemos
 // store/products ó store/products/shirts // store/category ó store/category/subcategory...
 
-// Para hacer la diferencia debemos
-// agregar como array de strings { slug: ["category", "subcategory"] } + 1 peticion fetch
+// Esto es porque slug pasa a ser un array de strings
+// [slug]   ---> { params }
+// [...slug]---> { slug: ["category", "subcategory"] }
+
 export const SlugStore = ({ params }) => {
     return(
         <div>
