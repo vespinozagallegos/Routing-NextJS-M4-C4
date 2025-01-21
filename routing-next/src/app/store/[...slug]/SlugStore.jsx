@@ -28,7 +28,7 @@
 // params no van desesructurados porque es una FUNCIÓN NO un COMPONENTE
 const fetchDataStore = async (params) => {                              //?<-------- se puede reemplazar params por {slug}
     // desestructuramos SLUG que es un objeto dentro de la PROPIEDAD PARAMS
-    const [category, subcategory] = params.slug;                        //?<-------- y params.slug se cambia por slug solamente
+    const [category, subcategory] = params.slug;                        //?<-------- y params.slug se cambia por slug solamente -> CONSIDERANDO QUE PARAMS ES ESTE OBJETO { slug: ["category", "subcategory"] }
     // PETICIÓN(request) con fetch a una API FICTICIA
     const data = await fetch(
         `https://api.tienda.com/products?category=${category}&subcategory=${subcategory}`
